@@ -55,8 +55,6 @@ while(True):
             for line in lines:
                 list_of_url.append(line)
 
-
-
         try:
             print("Start Saving Contacts on Apollo")
             
