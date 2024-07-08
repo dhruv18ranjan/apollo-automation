@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 import time, re, sys, traceback
+import os
 
 # Import credentials
 from creds import *
@@ -9,6 +10,8 @@ from creds import *
 # Initialize variables
 start_time = time.time()
 output_file_path = 'postOutput.txt'
+input_file_path = os.path.join(os.getcwd(), 'postInput.txt')
+
 
 # Set Chrome options for headless browsing
 chrome_options = Options()
@@ -31,7 +34,7 @@ def linkedin_login():
     print("Linkedin Login Successful")
 
 # Read post links from the file
-with open('postInput.txt', 'r') as file:
+with open('linkedin_engagement\postInput.txt', 'r') as file:
     post_links = file.readlines()
 
 # Login to LinkedIn
